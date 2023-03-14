@@ -1,0 +1,102 @@
+$firstBlack: #18181B;
+$firstBlack: #27272A;
+$nativeBlack: #000000;
+$greenBlack: #01271C;
+$footerBlack: #3F3F46;
+
+$primary: #4CFDC7;
+$red: #F43F5E;
+$darkGray: #71717A;
+$lightGray: #A1A1AA;
+
+$tablet: 1024px;
+$mobileL: 768px;
+$mobileM: 520px;
+$mobileS: 420px;
+
+$br: 4px;
+
+@font-face {
+    font-family: "regular";
+    src: url("../fonts/regular.ttf")
+}
+
+body {
+    font-family: "regular, sans-serif";
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0px 32px;
+    margin: 0px auto;
+}
+
+nav {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80;
+
+        .logo {
+            .full__logo {
+                display: block;
+
+            }
+
+            .mobile__logo {
+                display: none;
+            }
+        }
+
+        .nav__items {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .mobile__menu__btn {
+                display: none;
+                cursor: pointer;
+            }
+
+            .nav__menu {
+                display: flex;
+                gap: 32px;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: $firstBlack;
+                        text-decoration: none;
+
+                    }
+                }
+
+            }
+
+            .nav__btns {
+                display: flex;
+                gap: 8px;
+
+                button {
+                    border-radius: $br;
+                    padding: 9px 17px;
+                    cursor: pointer;
+                    color: $firstBlack;
+                    font-size: 12px;
+
+                    &#login {
+                        border: 1px solid $firstBlack;
+                        background: transparent;
+
+                    }
+
+                    &#singup {}
+
+                }
+
+            }
+        }
+    }
+}
