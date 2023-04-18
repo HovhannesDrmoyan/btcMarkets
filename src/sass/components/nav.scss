@@ -1,0 +1,135 @@
+nav {
+    padding-top: 32px;
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80;
+        
+
+        .logo {
+            .full__logo {
+                display: block;
+
+            }
+
+            .mobile__logo {
+                display: none;
+            }
+        }
+
+        .nav__items {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .mobile__menu__btn {
+                display: none;
+                cursor: pointer;
+            }
+
+            .nav__menu {
+                display: flex;
+                gap: 32px;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        color: $firstBlack;
+                        text-decoration: none;
+
+                        /*hover չի լինում*/
+                        &:hover {
+                            color: $primary;
+                        }
+
+                    }
+                }
+
+            }
+
+            .nav__btns {
+                display: flex;
+                gap: 8px;
+
+                button {
+                    border-radius: $br;
+                    padding: 9px 17px;
+                    cursor: pointer;
+                    color: $firstBlack;
+                    font-size: 12px;
+
+                    &#login {
+                        border: 1px solid $firstBlack;
+                        background: transparent;
+                        border-radius: $br;
+
+                    }
+
+                    &#singup {
+                        border: 1px solid $primary;
+                        background: $primary;
+                        color: $greenBlack;
+                        border-radius: $br;
+                    }
+
+                }
+
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            .nav__items {
+                .nav__menu {
+                    gap: 16px;
+                }
+            }
+        }
+
+
+
+        @media screen and (max-width: 830px) {
+            .nav__items {
+                gap: 16px;
+
+                .nav__menu {
+                    gap: 8px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $mobileL) {
+            .logo {
+                .full__logo {
+                    display: none;
+    
+                }
+    
+                .mobile__logo {
+                    display: block;
+                }
+            }
+        }
+
+        @media screen and (max-width: 620px) {
+            .nav__items {
+                gap: 8px;
+                .nav__menu {
+                    display: none;
+                }
+
+                .mobile__menu__btn {
+                    display: block;
+
+                    button {
+                        background: transparent;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

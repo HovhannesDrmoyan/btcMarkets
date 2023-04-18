@@ -1,0 +1,20 @@
+@import url("../../node_modules/normalize.css/normalize.css");
+@import "./components/variables.scss";
+@import "./components/global.scss";
+
+@import "./components/nav.scss";
+@import "./components/header.scss";
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
